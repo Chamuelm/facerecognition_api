@@ -1,0 +1,12 @@
+{
+    "apiPort": 3000,
+    "dbConfig": {
+        "client": "postgres",
+        "connection": {
+            "host": "127.0.0.1",
+            "user": "postgres",
+            "password": "bkuhkn15",
+            "database": "facerecognition"
+        }
+    }
+}
