@@ -20,8 +20,9 @@ app.post('/signin', signin.handleSignin(db, bcrypt));
 app.post('/register', register.handleRegister(db, bcrypt));
 app.get('/profile/:id', profile.handleProfile(db));
 app.post('/image', image.handleImage(db));
+app.get('/', (req ,res) => res.send("Face Recognition API is running"));
 
-const port = config.get('apiPort');
+const port = process.env.PORT || config.get('apiPort');
 app.listen(port, () => {
     console.log(`App is running on port ${port}`);
 });
