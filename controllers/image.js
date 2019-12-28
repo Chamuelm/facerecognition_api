@@ -1,6 +1,8 @@
 const Clarifai = require('clarifai');
 const config = require('config');
 
+const faceDetectionModelId = "a403429f2ddf4b49b307e318f00e528b";
+
 const clarifai = new Clarifai.App({
     apiKey: process.env.CLARIFAI_KEY || config.get("clarifaiKey")
 });
@@ -9,7 +11,7 @@ const handleImage = (db) => (req, res) => {
     const { id, imageUrl } = req.body;
     console.log("Received an image request with body: ", req.body);
 
-    clarifai.models.predict('a403429f2ddf4b49b307e318f00e528b', imageUrl)
+    clarifai.models.predict(faceDetectionModelId, imageUrl)
         .then(response => {
             console.log("Received response from API: ", response);
             if (response) {
