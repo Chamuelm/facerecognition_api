@@ -6,7 +6,7 @@
         "connection": {
             "host": "127.0.0.1",
             "user": "postgres",
-            "password": "bkuhkn15",
+            "password": "censored",
             "database": "facerecognition"
         }
     }
