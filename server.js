@@ -10,7 +10,7 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-const db = knex({
+const db = process.env.NODE_ENV != "production" ? knex(config.get("dbConfig")) : knex({
     client: 'pg',
     connection: {
         connectionString: process.env.DATABASE_URL,

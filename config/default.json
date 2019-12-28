@@ -1,5 +1,6 @@
 {
     "apiPort": 3000,
+    "clarifaiKey": "d74a49ea5cea4a9e8d8986dd96ecb910",
     "dbConfig": {
         "client": "postgres",
         "connection": {
